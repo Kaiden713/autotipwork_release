@@ -1,6 +1,10 @@
 # Stable and Public Version of Autotipwork
 automated tip conditioning program for Omicron scanning tunneling microscope
 
+## Authors
+* Shenkai Wang, Junmian Zhu, Raymond Blackwell, and Felix R. Fischer
+* A paper describing the methods used in this program is published here https://pubs.acs.org/doi/10.1021/acs.jpca.0c10731. If you find this program useful, we would greatly appreciate it if you can cite this paper in your publications.
+
 ## Usage
 ### On Local STM Compter
 * Download all the files in this repository in a local folder.
@@ -12,7 +16,7 @@ automated tip conditioning program for Omicron scanning tunneling microscope
 ### Python Packages Required
 * numpy, scipy, matplotlib, sklearn, joblib
 
-## UC Berkeley's Standard Copyright and Disclaimer Notice:
+## UC Berkeley's Standard Copyright and Disclaimer Notice
 * Copyright ©20XX. The Regents of the University of California (Regents). All Rights Reserved. Permission to use, copy, modify, and distribute this software and its documentation for educational, research, and not-for-profit purposes, without fee and without a signed licensing agreement, is hereby granted, provided that the above copyright notice, this paragraph and the following two paragraphs appear in all copies, modifications, and distributions. Contact The Office of Technology Licensing, UC Berkeley, 2150 Shattuck Avenue, Suite 510, Berkeley, CA 94720-1620, (510) 643-7201, otl@berkeley.edu, http://ipira.berkeley.edu/industry-info for commercial licensing opportunities.
 
 IN NO EVENT SHALL REGENTS BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF REGENTS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
