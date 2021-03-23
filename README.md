@@ -10,7 +10,7 @@ Automated tip conditioning program for Omicron scanning tunneling microscope. Ai
 * Download all the files in this repository in a local folder.
 * Change the remotepath and installpath in `STM.py` to the directory for RemoteAccess_API.dll and Matrix program folder, respectively.
 * The machine learning model in this repository is for 32 bit system. If you are running the program on 64 bit system, run `didv_training_ada.py` to train the machine learning model locally.
-* To see if your Matrix environment (RemoteAccess_API.dll file) is 32 bit or 64 bit, run 'test_connection.py' on a 32 bit or 64 bit python IDLE separately. The code should only be able to run in one version.
+* To see if your Matrix environment (RemoteAccess_API.dll file) is 32 bit or 64 bit, run `test_connection.py` on a 32 bit or 64 bit python IDLE. The code should only be able to run in one version.
 * Before running this program, make sure that the STM can obtain good topographic images and can obtain STS point spectra. The STM tips need to be manually conditioned for topographic images.
 * In the Matrix software, make sure the Z channel is always saved. The program will automatically save the Aux2 channel for STS point spectra. You also need to manually set the ZRamp parameters (recommended parameters: poke depth 2 nm, ramp rate 1 nm/s) and STS parameters (recommended parameters: bias range -2 V to 2 V, points collected 1024, stay 90 ms on each point, lock-in amplifier time constant: 30 ms). The bias range for STS point spectra needs to be larger than -1.5 V to 2 V. If other time constants are used, change the waiting time in `auto_tipwork_main.py` or `autotipworkui.py` accordingly.
 * Run `auto_tipwork_main.py` or `autotipworkui.py`.
