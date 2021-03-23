@@ -1,5 +1,5 @@
 # Stable and Public Version of Autotipwork
-automated tip conditioning program for Omicron scanning tunneling microscope
+Automated tip conditioning program for Omicron scanning tunneling microscope. Aimed to obtain STM tips in good condition for scanning tunneling spectroscopy on Au(111).
 
 ## Authors
 * Shenkai Wang, Junmian Zhu, Raymond Blackwell, and Felix R. Fischer
@@ -9,15 +9,18 @@ automated tip conditioning program for Omicron scanning tunneling microscope
 ### On Local STM Compter
 * Download all the files in this repository in a local folder.
 * Change the remotepath and installpath in `STM.py` to the directory for RemoteAccess_API.dll and Matrix program folder, respectively.
-* Run `auto_tipwork_main.py` or `autotipworkui.py` in the IDLE. 
 * The machine learning model in this repository is for 32 bit system. If you are running the program on 64 bit system, run `didv_training_ada.py` to train the machine learning model locally.
-* To see if your Matrix environment (RemoteAccess_API.dll file) is 32 bit or 64 bit, run 'test_connection.py' on a 32 bit or 64 bit python IDLE separately. The code can only be run in one version.
+* To see if your Matrix environment (RemoteAccess_API.dll file) is 32 bit or 64 bit, run 'test_connection.py' on a 32 bit or 64 bit python IDLE separately. The code should only be able to run in one version.
+* Before running this program, make sure that the STM can obtain good topographic images and can obtain STS point spectra. The STM tips need to be manually conditioned for topographic images.
+* In the Matrix software, make sure the Z channel is always saved. The program will automatically save the Aux2 channel for STS point spectra. You also need to manually set the ZRamp parameters (recommended parameters: poke depth 2 nm, ramp rate 1 nm/s) and STS parameters (recommended parameters: bias range -2 V to 2 V, points collected 1024, stay 90 ms on each point, lock-in amplifier time constant: 30 ms). The bias range for STS point spectra needs to be larger than -1.5 V to 2 V. If other time constants are used, change the waiting time in `auto_tipwork_main.py` or `autotipworkui.py` accordingly.
+* Run `auto_tipwork_main.py` or `autotipworkui.py`.
 
 ### Python Packages Required
 * numpy, scipy, matplotlib, sklearn, joblib
+* Can be run in Anaconda
 
-## UC Berkeley's Standard Copyright and Disclaimer Notice
-* Copyright ©20XX. The Regents of the University of California (Regents). All Rights Reserved. Permission to use, copy, modify, and distribute this software and its documentation for educational, research, and not-for-profit purposes, without fee and without a signed licensing agreement, is hereby granted, provided that the above copyright notice, this paragraph and the following two paragraphs appear in all copies, modifications, and distributions. Contact The Office of Technology Licensing, UC Berkeley, 2150 Shattuck Avenue, Suite 510, Berkeley, CA 94720-1620, (510) 643-7201, otl@berkeley.edu, http://ipira.berkeley.edu/industry-info for commercial licensing opportunities.
+## UC Berkeley's Copyright and Disclaimer Notice
+* Copyright ©2021. The Regents of the University of California (Regents). All Rights Reserved. Permission to use, copy, modify, and distribute this software and its documentation for educational, research, and not-for-profit purposes, without fee and without a signed licensing agreement, is hereby granted, provided that the above copyright notice, this paragraph and the following two paragraphs appear in all copies, modifications, and distributions. Contact The Office of Technology Licensing, UC Berkeley, 2150 Shattuck Avenue, Suite 510, Berkeley, CA 94720-1620, (510) 643-7201, otl@berkeley.edu, http://ipira.berkeley.edu/industry-info for commercial licensing opportunities.
 
 IN NO EVENT SHALL REGENTS BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF REGENTS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
