@@ -4,9 +4,10 @@ Automated tip conditioning program for Omicron scanning tunneling microscope. Ai
 ## Authors
 * Shenkai Wang, Junmian Zhu, Raymond Blackwell, and Felix R. Fischer
 * A paper describing the methods used in this program is published here https://pubs.acs.org/doi/10.1021/acs.jpca.0c10731. If you find this program useful, we would greatly appreciate it if you can cite this paper in your publications.
+* A provisional patent has been applied for the methods used in this program.
 
 ## Usage
-### On Local STM Compter
+### On Local STM Computer
 * Download all the files in this repository in a local folder.
 * Change the remotepath and installpath in `STM.py` to the directory for RemoteAccess_API.dll and Matrix program folder, respectively.
 * To see if your Matrix environment (RemoteAccess_API.dll file) is 32 bit or 64 bit, run `test_connection.py` on a 32 bit or 64 bit python IDLE. The code should only be able to run in one version. The Matrix environment can be 32 bit even if your windows 64 bit.
